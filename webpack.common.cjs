@@ -25,8 +25,13 @@ module.exports = {
           'style-loader',
           // Translates CSS into CommonJS
           'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader',
+          // Compiles Sass to CSS using the modern API
+          {
+            loader: 'sass-loader',
+            options: {
+              api: 'modern',
+            },
+          },
         ],
       },
       {
@@ -46,6 +51,14 @@ module.exports = {
             presets: [['@babel/preset-env', { targets: 'defaults' }]],
           },
         },
+      },
+      {
+        test: /\.(pdf)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },
