@@ -9,7 +9,9 @@
     "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
     "build": "webpack --config webpack.prod.cjs",
     "watch": "webpack --watch --config webpack.dev.cjs",
-    "start": "webpack serve --open --config webpack.dev.cjs"
+    "start": "webpack serve --open --config webpack.dev.cjs",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "keywords": [],
   "author": "",
@@ -36,7 +38,8 @@
     "webpack": "^5.106.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4",
-    "webpack-merge": "^5.10.0"
+    "webpack-merge": "^5.10.0",
+    "wrangler": "^4.111.0"
   },
   "dependencies": {
     "date-fns": "^3.6.0",
